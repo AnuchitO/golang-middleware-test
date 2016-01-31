@@ -6,7 +6,7 @@ Library   RequestsLibrary
 *** Test Cases ***
 Get Requests
   Create Session   sample   http://localhost:8088
-  ${resp}=  Get Request    sample     /
+  ${resp}=  Post Request    sample     /
   Log   ${resp}    console=True
   Log   ${resp.text}   console=True
   Should Be Equal As Strings    ${resp.status_code}    200
