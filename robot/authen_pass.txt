@@ -5,8 +5,8 @@ Library   RequestsLibrary
 
 *** Test Cases ***
 Get Requests
-  Create Session   google   http://www.google.com
-  ${resp}=  Get Request    google     /
+  Create Session   sample   http://localhost:8088
+  ${resp}=  Get Request    sample     /
   Log   ${resp}    console=True
   Log   ${resp.text}   console=True
   Should Be Equal As Strings    ${resp.status_code}    200
